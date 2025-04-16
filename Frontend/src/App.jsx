@@ -13,10 +13,6 @@ const App = () => {
   const [quoteOfTheDay, setQuoteOfTheDay] = useState({});
   const [topQuote, setTopQuote] = useState({});
 
-  useEffect(() => {
-    fetchRandomQuote();
-  }, []);
-
   const fetchRandomQuote = async () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/quote/quote`);
